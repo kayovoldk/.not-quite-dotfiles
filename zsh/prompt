@@ -10,29 +10,44 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$reset_color%}⇣"
 #ZSH_THEME_GIT_PROMPT_DIRTY=""
 #ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-# Fastest possible way to check if repo is dirty. Thanks btford for anything that looks magical in here.
+# Fastest possible way to check if repo is dirty. Thanks btford for anything that looks magical in here. Manually merged some changes back to original
 git_dirty() {
-  # check if we're in a git repo
-  command git rev-parse --is-inside-work-tree &>/dev/null || return
-  # check if it's dirty
-  # using these emoji make multi line commands be broken and appear on one line. shrug.
-  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '☔️' || echo '☀️'
-  #command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '⛈' || echo '🌞'
+	# check if we're in a git repo
+	command git rev-parse --is-inside-work-tree &>/dev/null || return
+
+	# check if it's dirty
+	# using these emoji make multi line commands be broken and appear on one line. shrug.
+    command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '☔️' || echo '☀️'
+    #command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '⛈' || echo '🌞'
 }
 
 # If it's a git repo, add the git prompt
-
+# TODO figure out if i need this function
 git_prompt_go() {
   # check if we're in the chromium dir, which is too big to do git shenanigans.
   if #test "$PWD" == "$CHROMIUM_DIR" (commented this out cause I dont need it)
   then
-    echo ' 'on $(git_current_branch)
+    echo ' ' on $(git_current_branch)
   else
      # check if we're in a git repo
     command git rev-parse --is-inside-work-tree &>/dev/null || return
-    echo ' 'on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty`' '
+    echo ' ' on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty`' '
   fi
 }
+
+
+function parse_git_stash {
+  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo ' ☣'
+}
+
+
+# Displays the exec time of the last command if set threshold was exceeded
+cmd_exec_time() {
+  local stop=`python -c 'import time;print int(round(time.time()*1000));'`
+  local start=${cmd_timestamp:-$stop}
+  let elapsed=$stop-$start
+}
+
 
 # For my own and others sanity
 # git:
@@ -57,4 +72,12 @@ battery_status() {
 }
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
+
+## Main prompt builder
+build_prompt() {
+
+}
+
 #PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT ")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
+
+

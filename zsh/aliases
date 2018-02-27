@@ -44,3 +44,4 @@ alias okgulp="gulp watch --reload"
 
 alias ee="exit"
 alias qq="exit"
+alias sz='source ~/.zshrc'
