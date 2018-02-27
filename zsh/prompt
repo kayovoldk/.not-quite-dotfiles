@@ -21,8 +21,7 @@ git_dirty() {
     #command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '⛈' || echo '🌞'
 }
 
-# If it's a git repo, add the git prompt
-# TODO figure out if i need this function
+# If it's a git repo, add the git prompt  >>TODO figure out if i need this function
 git_prompt_go() {
   # check if we're in the chromium dir, which is too big to do git shenanigans.
   if #test "$PWD" == "$CHROMIUM_DIR" (commented this out cause I dont need it)
@@ -35,7 +34,7 @@ git_prompt_go() {
   fi
 }
 
-
+# Are there stashes?
 function parse_git_stash {
   [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo ' ☣'
 }
@@ -72,11 +71,6 @@ battery_status() {
 }
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
-
-## Main prompt builder
-build_prompt() {
-
-}
 
 #PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT ")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
 
