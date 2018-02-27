@@ -1,4 +1,4 @@
-ZSH_THEME="refined"
+ZSH_THEME=""
 #ENABLE_CORRECTION="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
@@ -25,7 +25,7 @@ export LC_ALL=en_US.UTF-8
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
-source $HOME/.not-quite-dotfiles/zsh/chrome
+#source $HOME/.not-quite-dotfiles/zsh/chrome
 
 #export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
