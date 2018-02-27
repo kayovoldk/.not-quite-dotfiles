@@ -1,12 +1,12 @@
-ZSH_THEME="no-theme"
-ENABLE_CORRECTION="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+ZSH_THEME=""
+#ENABLE_CORRECTION="true"
+#DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
 export TTC_REPOS="~/Code","~/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=2
 export TTC_GITBOT='gitlog'
-export TTC_WEATHER='San Francisco'
+export TTC_WEATHER='37040'
 
 # the secret-keys.zsh file contains these vars:
 # export TTC_CONSUMER_KEY="..."
@@ -20,17 +20,17 @@ fi
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export EDITOR=emacs
+#export EDITOR=emacs
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
-export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
+#export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
 # for google cloud sdk
-source $HOME/Code/google-cloud-sdk/path.zsh.inc
+#source $HOME/Code/google-cloud-sdk/path.zsh.inc
 
 export NVM_DIR="/Users/noms/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
