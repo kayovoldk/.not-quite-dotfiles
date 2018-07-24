@@ -3,7 +3,7 @@ ZSH_THEME=""
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
-export TTC_REPOS="~/Code","~/.not-quite-dotfiles"
+export TTC_REPOS="/Users/kayovoldk/code","/Users/kayovoldk/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=2
 export TTC_GITBOT='gitlog'
 export TTC_WEATHER='37040'
