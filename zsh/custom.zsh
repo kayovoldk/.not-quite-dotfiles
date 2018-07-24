@@ -4,7 +4,7 @@ ZSH_THEME=""
 
 # for tiny-care-terminal
 export TTC_REPOS="/Users/kayovoldk/code","/Users/kayovoldk/.not-quite-dotfiles"
-export TTC_REPOS_DEPTH=2
+export TTC_REPOS_DEPTH=5
 export TTC_GITBOT='gitlog'
 export TTC_WEATHER='37040'
 
