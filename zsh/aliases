@@ -45,3 +45,15 @@ alias okgulp="gulp watch --reload"
 alias ee="exit"
 alias qq="exit"
 alias sz='source ~/.zshrc'
+
+#show hide files in finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+
+#Console info
+alias showPrivateLog='sudo log config --mode "private_data:on"'
+alias hidePrivateLog='sudo log config --mode "private_data:off"'
+
+#TensorFlow
+alias activatetf= 'cd $HOME/tensorflow && source ./bin/activate'
+

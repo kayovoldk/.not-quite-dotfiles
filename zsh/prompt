@@ -10,7 +10,12 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$reset_color%}⇣"
 #ZSH_THEME_GIT_PROMPT_DIRTY=""
 #ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-setopt PROMPT_SUBST
+#do i need this?
+#setopt PROMPT_SUBST
+
+#keybinds
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
 
 # Fastest possible way to check if repo is dirty. Thanks btford for anything that looks magical in here. Manually merged some changes back to original
 git_dirty() {

@@ -27,6 +27,17 @@ source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 #source $HOME/.not-quite-dotfiles/zsh/chrome
 
+#golang
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+#source stuff from homebrew function by the amazing alyssais
+load_from_brew() {
+  . "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  . "/usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+  . "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+}
+load_from_brew
+
 #export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
 # for google cloud sdk
