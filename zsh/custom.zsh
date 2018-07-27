@@ -3,11 +3,12 @@ ZSH_THEME=""
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
+# source https://github.com/notwaldorf/tiny-care-terminal/blob/master/sample.env
 export TTC_REPOS="/Users/kayovoldk/code","/Users/kayovoldk/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=5
 export TTC_GITBOT='gitlog'
-export TTC_WEATHER='37040'
-
+export TTC_WEATHER='Clarksville, TN'
+export TTC_SAY_BOX='parrot'
 # the secret-keys.zsh file contains these vars:
 # export TTC_CONSUMER_KEY="..."
 # export TTC_CONSUMER_SECRET="..."
@@ -63,3 +64,4 @@ blerg() {
 }
 
 blerg
+
