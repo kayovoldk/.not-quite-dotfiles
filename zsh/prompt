@@ -11,7 +11,7 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$reset_color%}⇣"
 #ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 #do i need this?
-#setopt PROMPT_SUBST
+setopt PROMPT_SUBST
 
 #keybinds
 bindkey "^[^[[C" forward-word
@@ -74,4 +74,5 @@ battery_status() {
 
 PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT ")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
 
-
+# This prompt is for bash and it has the colours and the silly bit but not the git stuff:
+# PS1='\e[31m$(echo "$SILLY_BIT")\e[32m~\e[34m\e[0m\e[31m ❥ \e[0m'

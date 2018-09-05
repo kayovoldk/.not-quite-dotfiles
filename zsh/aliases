@@ -57,3 +57,6 @@ alias hidePrivateLog='sudo log config --mode "private_data:off"'
 #TensorFlow
 alias activatetf= 'cd $HOME/tensorflow && source ./bin/activate'
 
+#Updating Python
+alias pyupgrade='pip3 install --upgrade pip setuptools wheel'
+
