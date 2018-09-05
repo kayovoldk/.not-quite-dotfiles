@@ -44,7 +44,7 @@ load_from_brew
 # for google cloud sdk
 #source $HOME/Code/google-cloud-sdk/path.zsh.inc
 
-export NVM_DIR="/Users/noms/.nvm"
+export NVM_DIR="/Users/kayovoldk/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 care_bot() {
