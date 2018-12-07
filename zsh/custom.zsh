@@ -1,6 +1,8 @@
 ZSH_THEME=""
 #ENABLE_CORRECTION="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
+#Enable Homebrew Verbose mode cause I hate myself
+HOMEBREW_VERBOSE=1
 
 # for tiny-care-terminal
 # source https://github.com/notwaldorf/tiny-care-terminal/blob/master/sample.env
@@ -15,6 +17,7 @@ export TTC_SAY_BOX='parrot'
 # export TTC_ACCESS_TOKEN="..."
 # export TTC_ACCESS_TOKEN_SECRET="..."
 
+#Grab Keys
 if [[ -a $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh ]]; then
   source $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh
 fi
@@ -29,7 +32,14 @@ source $HOME/.not-quite-dotfiles/zsh/aliases
 #source $HOME/.not-quite-dotfiles/zsh/chrome
 
 #golang
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+#rust language
+export PATH="$HOME/.cargo/bin:$PATH"
+#pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$PATH:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
 #source stuff from homebrew function by the amazing alyssais
 load_from_brew() {
@@ -39,7 +49,6 @@ load_from_brew() {
 }
 load_from_brew
 
-#export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
 # for google cloud sdk
 #source $HOME/Code/google-cloud-sdk/path.zsh.inc
