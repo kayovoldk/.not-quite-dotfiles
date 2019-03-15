@@ -34,7 +34,7 @@ source $HOME/.not-quite-dotfiles/zsh/aliases
 #golang
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 #rust language
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin:$PATH"
 #pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
