@@ -17,6 +17,8 @@ export TTC_SAY_BOX='parrot'
 # export TTC_ACCESS_TOKEN="..."
 # export TTC_ACCESS_TOKEN_SECRET="..."
 
+#Torsocks.conf
+export TORSOCKS_CONF_FILE="$HOME/.not-quite-dotfiles/config/torsocks.conf"
 #Grab Keys
 if [[ -a $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh ]]; then
   source $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh
