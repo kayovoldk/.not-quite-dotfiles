@@ -35,9 +35,9 @@ source $HOME/.not-quite-dotfiles/zsh/aliases
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 #rust language
 export PATH="$PATH:$HOME/.cargo/bin:$PATH"
-#pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#pyenv >> not using this rnq
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 

@@ -1,9 +1,8 @@
 # Fix the git_prompt_info output for oh-my-zsh.
 ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-#dont need this
-#ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
-
+#do need this?
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$reset_color%}⇡"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{$reset_color%}⇣"
 
@@ -64,7 +63,7 @@ cmd_exec_time() {
 # %(?..) => prompt conditional - %(condition.true.false)
 
 read -d '' SILLY_BIT << EOF
-(´ ▽｀).。ｏ♡
+(=^·^=).。ｏ♡
 EOF
 
 battery_status() {
